@@ -1,0 +1,44 @@
+.scene-panel,
+.controls-panel,
+.preview-panel,
+.depth-panel {
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  overflow: hidden;
+  background: var(--surface);
+}
+.panel-top {
+  height: 57px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+  border-bottom: 1px solid #30363390;
+  flex-shrink: 0;
+}
+.panel-title {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.panel-number {
+  font-family: monospace;
+  color: #859b8c;
+  font-size: 10px;
+  border: 1px solid #47554a;
+  border-radius: 4px;
+  padding: 3px 5px;
+}
+.tiny-tag {
+  font-size: 8px;
+  letter-spacing: 1px;
+  color: #a1b0a3;
+  margin-left: 6px;
+}
+.icon-button {
+  width: 44px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--muted);
+}

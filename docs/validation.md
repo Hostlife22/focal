@@ -8,7 +8,7 @@ npm run check
 npm run build
 ```
 
-`check` verifies Prettier, ESLint, TypeScript and Node behavioral tests. Optical tests cover a reference result, infinite far limits, aperture/focal-length behavior and every preset. Tests run directly against the TypeScript calculation module using Node 22's type stripping; no extra test framework is required.
+`check` verifies Prettier, ESLint, TypeScript and Node behavioral tests. Optical tests cover a reference result, infinite far limits, aperture/focal-length behavior and every preset. Reducer tests cover preset application, assembly separation, reset/capture counters and state isolation. Resource tests verify shared GPU resources are disposed exactly once. Tests run directly against the TypeScript calculation module using Node 22's type stripping; no extra test framework is required.
 
 CI runs these checks on pull requests and pushes to `main`, then builds production assets. It does not currently run browser automation, screenshot comparisons or an accessibility scanner. Record manual outcomes separately rather than treating a green build as browser verification.
 
@@ -37,3 +37,7 @@ Open `/focal/` on the preview server. Record browser/version, viewport, commit a
 On 2026-10-04, Node 22.22.0 completed formatting, lint, type checking, six optical tests and a production build with `/focal/` as the base path. A Chromium production-preview smoke check verified both canvas elements, canonical/home URLs, the Landscape preset's infinite far limit, help dismissal with focus restoration, PNG download and no horizontal overflow at 390 px. No page errors or HTTP error responses were observed during that check.
 
 The README screenshot was captured from that production preview at 1440 px wide. This smoke check does not constitute cross-browser, screen reader or full WCAG testing.
+
+## Refactor verification
+
+On 2026-10-04, the decomposed implementation passed `npm run check` (12 tests) and `npm run build`. Chromium checks against the production preview at 1440 px and 390 px verified both canvases, preset values, keyboard slider changes, separation/custom-state transitions, preserved canvas instances, visible blur updates, pointer focus, help focus trapping/restoration, PNG capture and reset without an extra download. No page errors or mobile horizontal overflow were observed. With WebGL disabled, both fallback messages appeared and presets/numeric optics remained usable.

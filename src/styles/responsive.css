@@ -1,0 +1,258 @@
+@media (min-width: 1440px) {
+  .app-shell {
+    padding: 0 64px;
+  }
+  .workspace {
+    grid-template-columns: minmax(0, 1fr) 350px;
+  }
+  .scene-panel {
+    height: 490px;
+  }
+  .preview-panel {
+    grid-template-rows: 53px 187px 43px;
+  }
+  .depth-panel {
+    height: 285px;
+  }
+  .controls-body {
+    padding: 28px;
+  }
+  .slider-control {
+    margin-bottom: 30px;
+  }
+}
+@media (max-width: 1100px) {
+  .app-shell {
+    padding: 0 28px;
+  }
+  .header-tagline {
+    display: none;
+  }
+  .workspace {
+    grid-template-columns: minmax(0, 1fr) 290px;
+    gap: 16px;
+  }
+  .panel-top {
+    padding: 0 14px;
+  }
+  .tiny-tag {
+    display: none;
+  }
+  .scene-panel {
+    height: 430px;
+  }
+  .scene-toolbar {
+    padding: 0 7px;
+  }
+  .view-tabs button {
+    padding: 0 8px;
+  }
+  .tool-button {
+    font-size: 9px;
+  }
+  .scene-tools {
+    gap: 0;
+  }
+  .preview-panel {
+    width: 100%;
+    grid-template-rows: 53px 200px 43px;
+  }
+  .depth-panel {
+    grid-row: 3;
+    margin: 0;
+    height: 250px;
+  }
+  .controls-panel {
+    grid-row: 1 / 4;
+  }
+  .controls-body {
+    padding: 24px 20px;
+  }
+  .control-tip {
+    margin-top: 26px;
+  }
+  .depth-values {
+    padding: 25px;
+  }
+  .presets-bar {
+    gap: 18px;
+  }
+  .presets-intro {
+    min-width: 165px;
+  }
+  .custom-label {
+    display: none;
+  }
+  .preset {
+    padding: 10px;
+  }
+  .heading-note {
+    display: none;
+  }
+  .depth-legend {
+    margin-top: 5px;
+  }
+  .plane-label {
+    left: 6%;
+  }
+}
+@media (max-width: 767px) {
+  .app-shell {
+    padding: 0 18px;
+  }
+  .site-header {
+    height: 78px;
+    gap: 12px;
+  }
+  .brand {
+    font-size: 28px;
+  }
+  .brand svg {
+    width: 27px;
+  }
+  .header-divider,
+  .lab-pill {
+    display: none;
+  }
+  .header-right {
+    gap: 0;
+  }
+  .help-button {
+    font-size: 11px;
+  }
+  .page-heading {
+    padding: 30px 0 25px;
+  }
+  h1 {
+    font-size: 40px;
+  }
+  .eyebrow {
+    font-size: 8px;
+    letter-spacing: 1.5px;
+  }
+  .page-heading p {
+    font-size: 12px;
+  }
+  .workspace {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+  .scene-panel {
+    height: 390px;
+  }
+  .scene-caption {
+    top: 18px;
+    left: 18px;
+  }
+  .sensor-label {
+    right: 15%;
+  }
+  .controls-panel {
+    order: 2;
+  }
+  .preview-panel {
+    order: 1;
+    width: 100%;
+    grid-template-rows: 53px 220px 45px;
+  }
+  .depth-panel {
+    order: 3;
+    height: 250px;
+    margin: 0;
+  }
+  .controls-body {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px 22px;
+    padding: 22px;
+  }
+  .control-section-title {
+    grid-column: 1 / -1;
+    margin-bottom: 12px;
+  }
+  .control-divider {
+    grid-column: 1 / -1;
+    margin: 6px 0 12px;
+  }
+  .slider-control {
+    margin-bottom: 15px;
+  }
+  .controls-body .slider-control:nth-of-type(4) {
+    grid-column: 1 / -1;
+  }
+  .control-tip {
+    margin-top: 5px;
+  }
+  .presets-bar {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 16px;
+    padding: 20px;
+  }
+  .preset-options {
+    gap: 8px;
+  }
+  .preset {
+    max-width: none;
+  }
+  .presets-intro {
+    min-width: 0;
+  }
+  .preset > span {
+    gap: 8px;
+    font-size: 10px;
+  }
+  .preset > small {
+    font-size: 8px;
+  }
+  footer {
+    font-size: 9px;
+  }
+  footer > span:last-child {
+    font-size: 6px;
+    letter-spacing: 1px;
+    max-width: 160px;
+    text-align: right;
+  }
+  .scene-hint {
+    font-size: 9px;
+  }
+  .scene-toolbar .icon-button {
+    width: 34px;
+  }
+  .view-tabs button {
+    font-size: 9px;
+    padding: 0 7px;
+  }
+  .tool-button {
+    gap: 5px;
+    font-size: 8px;
+  }
+  .plane-label {
+    font-size: 7px;
+    top: 40%;
+  }
+  .depth-values strong {
+    font-size: 22px;
+  }
+  .toast {
+    width: max-content;
+    max-width: 90%;
+    font-size: 11px;
+  }
+  .help-modal {
+    padding: 28px;
+  }
+  .help-modal p {
+    font-size: 12px;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *:before,
+  *:after {
+    transition: none !important;
+    scroll-behavior: auto !important;
+  }
+}

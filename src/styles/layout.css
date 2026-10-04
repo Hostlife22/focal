@@ -1,0 +1,124 @@
+.app-shell {
+  max-width: 1600px;
+  margin: 0 auto;
+  padding: 0 48px;
+}
+.site-header {
+  height: 96px;
+  border-bottom: 1px solid var(--border);
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-family: Manrope, sans-serif;
+  font-size: 32px;
+  letter-spacing: -1.5px;
+  font-weight: 800;
+}
+.brand svg,
+.brand-dot {
+  color: var(--mint);
+}
+.header-divider {
+  width: 1px;
+  height: 24px;
+  background: var(--border);
+}
+.header-tagline {
+  color: var(--muted);
+  font-size: 12px;
+}
+.header-right {
+  margin-left: auto;
+  display: flex;
+  align-items: center;
+  gap: 28px;
+}
+.lab-pill {
+  border: 1px solid var(--border);
+  padding: 8px 11px;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 9px;
+  letter-spacing: 1.1px;
+  font-weight: 500;
+}
+.lab-pill > span,
+.status-dot,
+.live-status > span {
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: var(--mint);
+  display: inline-block;
+  box-shadow: 0 0 9px #bef3d333;
+}
+.help-button {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #c4cbc5;
+  font-size: 12px;
+}
+.help-button svg:last-child {
+  margin-left: 4px;
+}
+.page-heading {
+  padding: 42px 0 34px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+.eyebrow {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--mint);
+  font-size: 9px;
+  letter-spacing: 2.1px;
+  font-weight: 500;
+}
+.eyebrow-line {
+  height: 1px;
+  width: 20px;
+  background: var(--mint);
+}
+h1 {
+  font-family: Manrope, sans-serif;
+  font-size: 49px;
+  letter-spacing: -2px;
+  font-weight: 500;
+  line-height: 1.35;
+  margin: 7px 0 7px;
+}
+h1 > span {
+  color: var(--mint);
+}
+.page-heading p {
+  font-size: 13px;
+  color: var(--muted);
+}
+.heading-note {
+  font-size: 11px;
+  line-height: 1.9;
+  text-align: right;
+  padding-bottom: 3px;
+  color: #bcc5bd;
+}
+.heading-note .status-dot {
+  margin-right: 5px;
+}
+.heading-note > span:last-child {
+  color: var(--muted);
+}
+.workspace {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 320px;
+  gap: 20px;
+}

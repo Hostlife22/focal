@@ -20,7 +20,7 @@ For UI or WebGL changes, also complete the relevant [manual checks](docs/validat
 
 Prettier controls indentation, quotes and wrapping: two spaces, single quotes, semicolons and trailing commas. Keep imports first, one blank line, interfaces/types when present, one blank line, then implementation. Separate adjacent functions and components with one blank line. Use named props interfaces and `import type` for type-only dependencies.
 
-Keep optical calculations in `src/lib/optics.ts`, renderer lifecycle inside scene components, shared resource cleanup in `src/lib/scene.ts` and application state in `App.tsx`. Reuse CSS variables and existing components. Dispose GPU resources, cancel animation frames and remove listeners on unmount; React StrictMode deliberately exercises cleanup during development.
+Keep optical calculations in `src/lib/optics.ts`, renderer lifecycle in `src/scenes/`, shared resource cleanup in `src/lib/scene.ts` and application transitions in `src/state/labReducer.ts`. Keep `App.tsx` focused on page composition. Reuse CSS variables and existing components. Dispose GPU resources, cancel animation frames and remove listeners on unmount; React StrictMode deliberately exercises cleanup during development.
 
 Do not weaken TypeScript or ESLint to hide a problem. Add behavioral tests for optical calculation changes. Document any changes to units, model assumptions, deployment URLs or accessibility behavior.
 

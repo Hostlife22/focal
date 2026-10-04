@@ -1,0 +1,73 @@
+.presets-bar {
+  display: flex;
+  align-items: center;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 16px 22px;
+  margin-top: 20px;
+  gap: 30px;
+  background: #171c19;
+}
+.presets-intro {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  min-width: 215px;
+}
+.presets-intro svg {
+  color: var(--mint);
+}
+.presets-intro h2 {
+  font-size: 12px;
+}
+.presets-intro p {
+  font-size: 10px;
+  color: var(--muted);
+  margin-top: 4px;
+}
+.preset-options {
+  display: flex;
+  gap: 12px;
+  flex: 1;
+}
+.preset {
+  border: 1px solid #354039;
+  border-radius: 6px;
+  text-align: left;
+  flex: 1;
+  padding: 10px 14px;
+  background: #202721;
+  max-width: 180px;
+}
+.preset > span {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 11px;
+  gap: 20px;
+}
+.preset > span > svg {
+  color: #9fb09f;
+}
+.preset > small {
+  display: block;
+  font-family: monospace;
+  font-size: 9px;
+  color: var(--muted);
+  margin-top: 6px;
+}
+.preset > small > span {
+  margin: 0 5px;
+}
+.preset:hover,
+.preset.selected {
+  background: #293a2d;
+  border-color: #88b997;
+}
+.custom-label {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--muted);
+  font-size: 10px;
+}

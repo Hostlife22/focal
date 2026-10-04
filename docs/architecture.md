@@ -2,18 +2,32 @@
 
 ## Responsibilities
 
-| Module                            | Responsibility                                                    |
-| --------------------------------- | ----------------------------------------------------------------- |
-| `src/main.tsx`                    | Mount React with StrictMode and load global CSS                   |
-| `src/App.tsx`                     | Settings, presets, help, notifications and page composition       |
-| `src/components/Slider.tsx`       | Shared native range input and displayed value                     |
-| `src/components/OpticalScene.tsx` | Lens geometry, orbit controls, rays and focal plane               |
-| `src/components/Viewfinder.tsx`   | Procedural scene, BokehPass, pointer focus and PNG download       |
-| `src/lib/optics.ts`               | Settings types, defaults, presets and depth-of-field calculations |
-| `src/lib/scene.ts`                | Shared GPU resource disposal and WebGL error message              |
-| `src/styles.css`                  | Color/spacing tokens, layout, responsiveness and reduced motion   |
+| Module                                                         | Responsibility                                                              |
+| -------------------------------------------------------------- | --------------------------------------------------------------------------- |
+| `src/App.tsx`                                                  | Compose the page and connect state to panels                                |
+| `src/state/labReducer.ts`                                      | Pure, typed transitions for settings, presets, views and request counters   |
+| `src/hooks/useCameraLab.ts`                                    | React adapter and actions for the lab reducer                               |
+| `src/hooks/useNotice.ts`                                       | Notification lifetime, including repeated messages                          |
+| `src/components/lab/`                                          | Lens explorer, controls, preview, depth results and presets                 |
+| `src/components/layout/`                                       | Site header, heading and footer                                             |
+| `src/components/ui/`                                           | Shared panel header, help dialog and toast                                  |
+| `src/components/Slider.tsx`                                    | Native range input and displayed value                                      |
+| `src/components/OpticalScene.tsx`, `Viewfinder.tsx`            | Canvas hosts and accessible overlays                                        |
+| `src/hooks/useSceneController.ts`                              | Mount, update and dispose controllers from committed React state            |
+| `src/scenes/createOpticalScene.ts`, `createViewfinderScene.ts` | Camera, interaction, rendering and resource ownership                       |
+| `src/scenes/opticalModel.ts`, `viewfinderModel.ts`             | Procedural geometry and lens visualization updates                          |
+| `src/scenes/runtime.ts`                                        | Renderer creation, resize observation, animation loop and snapshot download |
+| `src/lib/optics.ts`                                            | Domain types, ranges, defaults, presets and depth-of-field calculation      |
+| `src/lib/scene.ts`                                             | Shared GPU disposal and WebGL fallback                                      |
+| `src/styles/`                                                  | Tokens, shared panels, component styles and responsive overrides            |
 
-Settings flow down from App. Slider and viewfinder callbacks update the shared state; numeric results are derived from it. Renderer effects initialize once; refs give animation callbacks the latest settings without rebuilding scenes on each slider update. ResizeObservers update render size and camera aspect ratio. Cleanup cancels frames, disconnects observers, removes listeners/canvases and disposes GPU resources. Shared geometries/materials are disposed once per scene.
+State flows through explicit callbacks; no global store or context is needed. The reducer owns coupled transitions: changing separation opens the lens assembly, applying a preset copies only optical fields, and reset preserves the capture counter to avoid accidental downloads.
+
+React scene hosts mount controllers once. State updates reach controllers through effects, without recreating WebGL contexts. The optical explorer keeps an animation loop for OrbitControls damping. The static viewfinder renders only on settings changes or resize. Snapshot notifications follow successful PNG creation.
+
+Controllers own their canvases, input listeners, resize observers and GPU resources. Cleanup stops animation, disconnects observers, removes listeners, disposes geometries/materials and all postprocessing passes, then removes the canvas. The shared hook supports StrictMode setup/cleanup cycles. Ray updates reuse existing geometry buffers.
+
+The stylesheet entry imports modules in cascade order. Component classes and responsive behavior remain compatible with the original layout.
 
 ## Units and calculations
 

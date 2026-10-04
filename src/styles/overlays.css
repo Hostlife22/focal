@@ -1,0 +1,110 @@
+footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 25px 0 29px;
+  color: #849286;
+  font-size: 10px;
+}
+footer > span:last-child {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  font-size: 8px;
+  letter-spacing: 1.6px;
+}
+.toast {
+  position: fixed;
+  bottom: 28px;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 14px 20px;
+  border: 1px solid #54735b;
+  background: #24342a;
+  box-shadow: 0 8px 35px #0008;
+  border-radius: 9px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 12px;
+  color: var(--mint);
+  z-index: 100;
+}
+.modal-backdrop {
+  position: fixed;
+  inset: 0;
+  background: #050a07bb;
+  backdrop-filter: blur(8px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+  z-index: 100;
+}
+.help-modal {
+  max-width: 490px;
+  position: relative;
+  padding: 36px;
+  border: 1px solid var(--border);
+  background: var(--surface);
+  border-radius: 16px;
+}
+.help-modal > svg {
+  color: var(--mint);
+  margin-bottom: 16px;
+}
+.help-modal h2 {
+  font-family: Manrope, sans-serif;
+  font-size: 26px;
+  margin-bottom: 20px;
+}
+.help-modal p {
+  font-size: 13px;
+  color: #b7c4ba;
+  line-height: 1.7;
+  margin: 15px 0;
+}
+.help-modal strong {
+  color: var(--mint);
+  font-weight: 500;
+}
+.help-modal .help-footnote {
+  font-size: 11px;
+  color: var(--muted);
+  padding-top: 15px;
+  border-top: 1px solid var(--border);
+}
+.modal-close {
+  position: absolute;
+  right: 15px;
+  top: 15px;
+}
+.skip-link {
+  position: absolute;
+  left: 20px;
+  top: -70px;
+  background: var(--mint);
+  color: var(--bg);
+  padding: 12px;
+  z-index: 100;
+}
+.skip-link:focus {
+  top: 12px;
+}
+.webgl-error {
+  padding: 40px;
+  font-size: 13px;
+  color: var(--muted);
+  line-height: 1.7;
+}
+.scene-panel:fullscreen {
+  height: 100dvh;
+  width: 100vw;
+  border-radius: 0;
+}
+.scene-panel:fullscreen .scene-content {
+  flex: 1;
+}
+.scene-panel:fullscreen .panel-top {
+  background: var(--surface);
+}

@@ -59,3 +59,13 @@ export function depthOfField(settings: LensSettings) {
 export function distanceLabel(value: number): string {
   return Number.isFinite(value) ? `${value.toFixed(2)} m` : '∞';
 }
+
+export type LensPreset = (typeof PRESETS)[number];
+export type PresetName = LensPreset['name'] | 'Custom';
+
+export const LENS_RANGES = {
+  focus: { min: 0.5, max: 10, step: 0.1 },
+  aperture: { min: 1.4, max: 16, step: 0.1 },
+  focalLength: { min: 24, max: 85, step: 1 },
+  spacing: { min: 0, max: 40, step: 1 },
+} as const;
