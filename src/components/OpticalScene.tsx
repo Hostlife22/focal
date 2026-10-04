@@ -9,6 +9,7 @@ interface OpticalSceneProps {
   view: ViewMode;
   resetKey: number;
 }
+
 const COLORS = {
   mint: 0xa2edc8,
   glass: 0x75c6c5,
@@ -17,6 +18,7 @@ const COLORS = {
   grid: 0x293632,
   background: 0x141b19,
 };
+
 export function OpticalScene({ settings, view, resetKey }: OpticalSceneProps) {
   const container = useRef<HTMLDivElement>(null);
   const live = useRef({ settings, view, resetKey });

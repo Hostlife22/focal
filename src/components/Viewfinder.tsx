@@ -6,11 +6,13 @@ import { RenderPass } from 'three/addons/postprocessing/RenderPass.js';
 import { BokehPass } from 'three/addons/postprocessing/BokehPass.js';
 import { OutputPass } from 'three/addons/postprocessing/OutputPass.js';
 import type { LensSettings } from '../lib/optics';
+
 interface ViewfinderProps {
   settings: LensSettings;
   captureKey: number;
   onFocus: (distance: number) => void;
 }
+
 export function Viewfinder({ settings, captureKey, onFocus }: ViewfinderProps) {
   const host = useRef<HTMLDivElement>(null);
   const live = useRef({ settings, captureKey, onFocus });

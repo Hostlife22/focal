@@ -89,7 +89,11 @@ export default function App() {
         Skip to the camera lab
       </a>
       <header className="site-header">
-        <a href="/" className="brand" aria-label="Focal home">
+        <a
+          href={import.meta.env.BASE_URL}
+          className="brand"
+          aria-label="Focal home"
+        >
           <Aperture size={30} strokeWidth={1.5} />
           <span>
             focal<span className="brand-dot">.</span>

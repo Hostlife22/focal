@@ -7,7 +7,9 @@ export interface LensSettings {
   rays: boolean;
   plane: boolean;
 }
+
 export type ViewMode = 'perspective' | 'side' | 'front';
+
 export const DEFAULT_SETTINGS: LensSettings = {
   focus: 3,
   aperture: 2.8,
@@ -17,6 +19,7 @@ export const DEFAULT_SETTINGS: LensSettings = {
   rays: true,
   plane: true,
 };
+
 export const PRESETS = [
   {
     name: 'Portrait',
@@ -40,6 +43,7 @@ export const PRESETS = [
     focalLength: 24,
   },
 ] as const;
+
 export function depthOfField(settings: LensSettings) {
   const f = settings.focalLength;
   const distance = settings.focus * 1000;
@@ -51,6 +55,7 @@ export function depthOfField(settings: LensSettings) {
       : Infinity;
   return { near, far, hyperfocal: hyperfocal / 1000, total: far - near };
 }
+
 export function distanceLabel(value: number): string {
   return Number.isFinite(value) ? `${value.toFixed(2)} m` : '∞';
 }

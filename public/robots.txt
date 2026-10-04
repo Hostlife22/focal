@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /focal/
+
+Sitemap: https://hostlife22.github.io/focal/sitemap.xml

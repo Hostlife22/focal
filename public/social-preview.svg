@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <defs>
+    <radialGradient id="glow"><stop stop-color="#2c5144"/><stop offset="1" stop-color="#101414"/></radialGradient>
+  </defs>
+  <rect width="1200" height="630" fill="#101414"/>
+  <circle cx="920" cy="315" r="310" fill="url(#glow)"/>
+  <g fill="none" stroke="#bef3d3">
+    <circle cx="918" cy="315" r="176" stroke-width="2" opacity=".25"/>
+    <circle cx="918" cy="315" r="148" stroke-width="3" opacity=".6"/>
+    <circle cx="918" cy="315" r="120" stroke-width="2"/>
+    <path d="M918 195 1018 265 1018 365 918 435 818 365 818 265Z" stroke-width="3"/>
+    <path d="m918 195 42 144m58-74-144 42m144 58-42-144m-58 214-42-144m-58 74 144-42m-144-58 42 144" stroke-width="2" opacity=".7"/>
+    <path d="M694 315h48m352 0h48M918 91v48m0 352v48" opacity=".5"/>
+  </g>
+  <g font-family="Arial, sans-serif">
+    <text x="80" y="116" fill="#bef3d3" font-size="16" letter-spacing="4">INTERACTIVE CAMERA LAB</text>
+    <text x="76" y="277" fill="#edeee6" font-size="108" font-weight="700">focal<tspan fill="#bef3d3">.</tspan></text>
+    <text x="80" y="360" fill="#edeee6" font-size="36">Find your focus.</text>
+    <text x="80" y="412" fill="#9ba69f" font-size="22">Go inside the lens. Play with light.</text>
+    <text x="80" y="538" fill="#bef3d3" font-size="17" letter-spacing="2">FOCUS · APERTURE · DEPTH OF FIELD</text>
+  </g>
+</svg>

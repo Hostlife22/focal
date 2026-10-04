@@ -1,4 +1,5 @@
 import type { CSSProperties } from 'react';
+
 interface SliderProps {
   label: string;
   value: number;
@@ -10,6 +11,7 @@ interface SliderProps {
   end: string;
   onChange: (value: number) => void;
 }
+
 export function Slider({
   label,
   value,
